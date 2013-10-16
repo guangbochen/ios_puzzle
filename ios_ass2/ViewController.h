@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UILabel *seedLabel;
-- (IBAction)StartPuzzleAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *seedTxt;
+
+//start puzzle button
+- (IBAction)StartPuzzleAction:(id)sender;
+
+//spinner picker 
+@property (weak, nonatomic) IBOutlet UIPickerView *spinnerPicker;
 
 @end

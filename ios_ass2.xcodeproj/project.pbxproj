@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E388DCB4180E5B8D0093588A /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = E388DCB3180E5B8D0093588A /* Component.m */; };
+		E388DCB7180E5B9D0093588A /* Components.m in Sources */ = {isa = PBXBuildFile; fileRef = E388DCB6180E5B9D0093588A /* Components.m */; };
 		E3D02B12180D2FD100DD1B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D02B11180D2FD100DD1B7B /* UIKit.framework */; };
 		E3D02B14180D2FD100DD1B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D02B13180D2FD100DD1B7B /* Foundation.framework */; };
 		E3D02B16180D2FD100DD1B7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D02B15180D2FD100DD1B7B /* CoreGraphics.framework */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E388DCB2180E5B8D0093588A /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		E388DCB3180E5B8D0093588A /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		E388DCB5180E5B9D0093588A /* Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Components.h; sourceTree = "<group>"; };
+		E388DCB6180E5B9D0093588A /* Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Components.m; sourceTree = "<group>"; };
 		E3D02B0E180D2FD100DD1B7B /* ios_ass2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_ass2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D02B11180D2FD100DD1B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E3D02B13180D2FD100DD1B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +95,10 @@
 				E3D02B2C180D2FD100DD1B7B /* ViewController.h */,
 				E3D02B2D180D2FD100DD1B7B /* ViewController.m */,
 				E3D02B18180D2FD100DD1B7B /* Supporting Files */,
+				E388DCB2180E5B8D0093588A /* Component.h */,
+				E388DCB3180E5B8D0093588A /* Component.m */,
+				E388DCB5180E5B9D0093588A /* Components.h */,
+				E388DCB6180E5B9D0093588A /* Components.m */,
 			);
 			path = ios_ass2;
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 				E3D02B1E180D2FD100DD1B7B /* main.m in Sources */,
 				E3D02B22180D2FD100DD1B7B /* AppDelegate.m in Sources */,
 				E3D02B2E180D2FD100DD1B7B /* ViewController.m in Sources */,
+				E388DCB4180E5B8D0093588A /* Component.m in Sources */,
+				E388DCB7180E5B9D0093588A /* Components.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +310,7 @@
 				E3D02B33180D2FD100DD1B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
