@@ -9,6 +9,8 @@
 #import "Components.h"
 #define maxValue 5
 #define minValue 0
+#define firstRow 0
+#define count 5
 
 @implementation Components
 
@@ -22,7 +24,7 @@
 -(void) setComponents
 {
     int row = 0;
-    for(int i=0; i<5; i++)
+    for(int i=0; i<count; i++)
     {
         NSNumber* value = [NSNumber numberWithInt:row];
         [components addObject:value];
@@ -76,7 +78,7 @@
     for(NSNumber* row in components)
     {
         int intVal = [row intValue];
-        if (intVal != 0) return false;
+        if (intVal != firstRow) return false;
     }
 
     return solved;

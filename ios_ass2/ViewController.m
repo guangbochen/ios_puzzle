@@ -33,7 +33,6 @@
 
     //set seed text field keyboard to number mode
     seedTxt.keyboardType = UIKeyboardTypeNumberPad;
-
     spinnerPicker.delegate = self;
 
     //init components object
@@ -57,7 +56,8 @@
     //validate input seed number
     if([seedTxt.text isEqualToString:@""])
     {
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Sorry"
+        UIAlertView *message = [[UIAlertView alloc]
+                initWithTitle:@"Sorry"
                 message:@"Invalid seed number" delegate:nil
                 cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [message show];
@@ -75,9 +75,7 @@
         for(int i = 0; i<range; i++)
         {
             int rand_num = random() % range;
-            //[spinnerPicker selectRow:rand_num inComponent:i animated:TRUE];
             [self moveComponent:rand_num andComponent:i];
-
         }
     }
 
@@ -88,16 +86,18 @@
     [seedTxt resignFirstResponder];
 }
 
+// this method handles the selection of snipper components
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row
        inComponent:(NSInteger)component {
 
-    // Handle the selection
+    //update the component row
     [self moveComponent:row andComponent:component];
 
-    //if puzzle is solved show the message dialog
+    //display message if puzzle is solved
     BOOL solved = [components puzzleIsSolved];
     if (solved) {
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Congratulations"
+        UIAlertView *message = [[UIAlertView alloc]
+                initWithTitle:@"Congratulations"
                 message:@"You have solved spinner" delegate:nil
                 cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [message show];
@@ -108,13 +108,13 @@
 // tell the picker how many rows are available for a given component
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component {
-    //all the componets have the same number of count as 5
     return [values count];
 }
 
 // tell the picker how many components it will have
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 5;
+    int numberOfComponents = 5;
+    return numberOfComponents;
 }
 
 // tell the picker the value for a given component
@@ -138,14 +138,11 @@ numberOfRowsInComponent:(NSInteger)component {
     int rightComponent;
     if(component == firstComponent)
     {
-        //if is last component
         leftComponent = 4;
         rightComponent = 1;
     }
     else if(component == lastComponet)
     {
-
-        //if is last component
         leftComponent = 3;
         rightComponent = 0;
     }
