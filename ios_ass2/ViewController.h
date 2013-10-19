@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Components.h"
 
 @interface ViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
-@property (weak, nonatomic) IBOutlet UILabel *seedLabel;
 @property (weak, nonatomic) IBOutlet UITextField *seedTxt;
 
 //start puzzle button
@@ -19,5 +19,9 @@
 
 //spinner picker 
 @property (weak, nonatomic) IBOutlet UIPickerView *spinnerPicker;
+
+//data source for spinner picker
+@property (strong, nonatomic) NSArray* values;
+@property (strong, nonatomic) Components* components;
 
 @end

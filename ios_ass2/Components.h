@@ -1,5 +1,5 @@
 //
-//  Components.h
+//  Component.h
 //  ios_ass2
 //
 //  Created by guangbo on 16/10/13.
@@ -13,5 +13,10 @@
     NSMutableArray *components;
 }
 
+-(Components *) init;
+-(void) setComponents;
+-(int) getMove:(int)row andComponent:(int)component;
+-(int) getNextRow:(int)move andComponent:(int)component;
+-(BOOL) puzzleIsSolved;
 
 @end
