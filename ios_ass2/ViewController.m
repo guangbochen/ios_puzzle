@@ -57,8 +57,8 @@
     if([seedTxt.text isEqualToString:@""])
     {
         UIAlertView *message = [[UIAlertView alloc]
-                initWithTitle:@"Sorry"
-                message:@"Invalid seed number" delegate:nil
+                initWithTitle:@"Warning"
+                message:@"You must enter a seed value before starting spinner" delegate:nil
                 cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [message show];
     }
@@ -66,6 +66,7 @@
     {
         int seed = [seedTxt.text intValue];
         srandom(seed);
+        [seedTxt setText:@""];
 
         //re-initialise components object when new seed is entered
         components = [[Components alloc] init];
